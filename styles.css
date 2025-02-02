@@ -8,7 +8,7 @@
 /* Body and Background */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    background-color: #e3d9a3;
     color: #333;
     line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
     background-color: #ff5c8d; /* Soft pink for a Valentine's feel */
-    color: #dbd8a6fd;
+    color: #fffffffd;
     padding: 20px 0;
     text-align: center;
 }
