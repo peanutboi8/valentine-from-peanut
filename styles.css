@@ -5,78 +5,63 @@
     box-sizing: border-box;
 }
 
-/* Body and Background */
+/* Fullscreen Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e3d9a3;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: #ff5c8d; /* Soft pink for a Valentine's feel */
-    color: #fffffffd;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Main Content */
-main {
-    padding: 40px 0;
-}
-
-.content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc; /* Beige background */
+    flex-direction: column;
 }
 
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 45%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card h2 {
-    font-size: 2em;
-    color: #ff5c8d;
-}
-
-.card p {
-    font-size: 1em;
-    color: #666;
-}
-
-/* Hover Effect */
-.card:hover {
-    transform: translateY(-10px);
-}
-
-/* Footer */
-footer {
-    background-color: #ff5c8d;
-    color: #fff;
-    padding: 15px 0;
+/* Main Content Styling */
+.content {
     text-align: center;
+    z-index: 1;
 }
 
-footer p {
-    font-size: 1em;
+/* Header (Title) Styling */
+h1 {
+    font-size: 4rem;
+    color: #ff69b4; /* Pink color for the title */
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Button Styles */
+.buttons button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: #ff69b4; /* Pink background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.buttons button:hover {
+    background-color: #ff1493; /* Darker pink for hover effect */
 }
