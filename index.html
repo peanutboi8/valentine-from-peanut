@@ -9,16 +9,20 @@
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="background-video">
-        <source src="spiceadams-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Main Content -->
-    <div class="content">
+    <!-- Main Content Container -->
+    <div class="main-container">
+        <!-- Header (Title) -->
         <h1>Will you take this ham chơi to be your valentine?</h1>
         
+        <!-- Video (Smaller) -->
+        <div class="video-container">
+            <video autoplay muted loop id="background-video">
+                <source src="spiceadams-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Buttons -->
         <div class="buttons">
             <button onclick="redirectToPage('yes')">Yes</button>
             <button onclick="redirectToPage('no')">HELLL no</button>

@@ -5,18 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Fullscreen Video */
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* Body */
+/* Fullscreen Background */
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -25,34 +14,47 @@ body {
     height: 100vh;
     background-color: #f5f5dc; /* Beige background */
     flex-direction: column;
+    text-align: center;
 }
 
-/* Main Content Styling */
-.content {
-    text-align: center;
-    z-index: 1;
+/* Main Content Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between header, video, and buttons */
 }
 
 /* Header (Title) Styling */
 h1 {
-    font-size: 4rem;
+    font-size: 3rem; /* Slightly smaller size */
     color: #ff69b4; /* Pink color for the title */
-    margin-bottom: 2rem;
-    text-align: center;
     font-weight: bold;
+}
+
+/* Video Container Styling */
+.video-container {
+    width: 70%; /* Set the width to 70% of the screen */
+    max-width: 500px; /* Max width of the video */
+}
+
+#background-video {
+    width: 100%; /* Make the video fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add some round corners to the video */
 }
 
 /* Buttons Styling */
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem; /* Space between the buttons */
 }
 
-/* Button Styles */
 .buttons button {
     padding: 1rem 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #ff69b4; /* Pink background */
     color: white;
     border: none;
