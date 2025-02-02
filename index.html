@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Valentine from Peanut</title>
+    <title>Will you be my Valentine?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Valentine's Day with Peanut</h1>
-            <p>Celebrating love, happiness, and everything in between!</p>
+    <!-- Background Video of a Cat -->
+    <video autoplay muted loop id="background-video">
+        <source src="cat-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Will you be my Valentine?</h1>
+        
+        <div class="buttons">
+            <button onclick="redirectToPage('yes')">Yes</button>
+            <button onclick="redirectToPage('no')">Hell No</button>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content Section -->
-    <main>
-        <section class="content">
-            <div class="card">
-                <h2>Love in the Air</h2>
-                <p>Feel the love with our special Valentine's day content!</p>
-            </div>
+    <script>
+        function redirectToPage(response) {
+            // Store the response in localStorage so it can be accessed on the next page
+            localStorage.setItem("valentineResponse", response);
 
-            <div class="card">
-                <h2>Gift Ideas</h2>
-                <p>Find the perfect gift for your loved ones this Valentine's Day.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Valentine from Peanut. All Rights Reserved.</p>
-    </footer>
+            // Redirect to the next page (next-page.html)
+            window.location.href = "next-page.html";
+        }
+    </script>
 
 </body>
 </html>
+

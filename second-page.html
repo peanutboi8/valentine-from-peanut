@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Response</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video of a Cat (Optional for the second page too) -->
+    <video autoplay muted loop id="background-video">
+        <source src="cat-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Thank you for your response!</h1>
+
+        <div class="response-message">
+            <p id="message"></p>
+        </div>
+
+        <div class="back-button">
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the response from localStorage
+        const response = localStorage.getItem("valentineResponse");
+
+        const messageElement = document.getElementById("message");
+
+        // Show different message based on the response
+        if (response === "yes") {
+            messageElement.innerHTML = "Yay! You said Yes! ❤️";
+        } else if (response === "no") {
+            messageElement.innerHTML = "Oh no! You said Hell No! 😢";
+        }
+
+        // Function to go back to the first page
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
