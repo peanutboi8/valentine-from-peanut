@@ -1,24 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fbe9e7; /* light pink background */
-    color: #d32f2f; /* dark red text */
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-  }
-  header {
-    background-color: #d32f2f;
-    color: white;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ff5c8d; /* Soft pink for a Valentine's feel */
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-  }
-  section {
-    text-align: center;
-    padding: 40px;
-  }
-  h1 {
+}
+
+header h1 {
     font-size: 3em;
-    margin-bottom: 0.2em;
-  }
-  p {
-    font-size: 1.5em;
-  }
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card h2 {
+    font-size: 2em;
+    color: #ff5c8d;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background-color: #ff5c8d;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
