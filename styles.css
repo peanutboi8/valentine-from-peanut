@@ -28,12 +28,15 @@ h1 {
 
 /* Video Container */
 .video-container {
-    width: 25%; /* Reduce video size to 25% */
-    max-width: 250px; /* Keep it from getting too large */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Make sure it takes the full width for centering */
 }
 
 #background-video {
-    width: 100%;
+    width: 25%; /* Reduce video size */
+    max-width: 250px; /* Prevent it from getting too large */
     height: auto;
     border-radius: 10px;
 }
