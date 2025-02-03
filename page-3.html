@@ -13,50 +13,49 @@
         <!-- Dynamic Header -->
         <h1 id="dynamic-text"></h1>
 
-        <!-- Image -->
+        <!-- Image Container -->
         <div class="image-container">
             <img id="response-image" src="oppa_phil.jpeg" alt="A picture of me">
         </div>
 
         <!-- Buttons -->
-        <div class="buttons" id="buttons-container">
-            <button id="left-button" onclick="redirectToFourthPage('left')"></button>
-            <button id="right-button" onclick="redirectToFourthPage('right')"></button>
+        <div class="buttons">
+            <button id="left-button" onclick="redirectToFinalPage('I LOVE YOU OPPA PHIL')"></button>
+            <button id="right-button" onclick="redirectToFinalPage('ok what's next')"></button>
         </div>
     </div>
 
     <script>
         // Get stored response from localStorage
-        const response = localStorage.getItem("secondResponse");
+        let response = localStorage.getItem("secondResponse");
 
-        // Get button container
-        const buttonContainer = document.getElementById("buttons-container");
+        // Debugging: Log retrieved value
+        console.log("Retrieved secondResponse:", `"${response}"`);
+
+        // Trim whitespace (in case of accidental spaces)
+        if (response) {
+            response = response.trim();
+        }
 
         // Get button elements
         const leftButton = document.getElementById("left-button");
         const rightButton = document.getElementById("right-button");
 
-        console.log("Stored response:", response); // Debugging
-
+        // Change text based on the previous response
         if (response === "....sure I guess" || response === "YAAAAAAAS") {
             document.getElementById("dynamic-text").innerText = "AMAZEBALLS";
             leftButton.innerText = "I LOVE YOU OPPA PHIL";
             rightButton.innerText = "ok what's next";
-        } 
-        else if (response === "still no" || response === "nahhh i'm good") {
+        } else {
             document.getElementById("dynamic-text").innerText = "😈😈😈 WELL TOO BAD YOU'RE STUCK WITH ME 😈😈😈";
-            
-            // Remove existing buttons and add a single one
-            buttonContainer.innerHTML = `<button onclick="redirectToFinalPage('next')">ok whatever what's next</button>`;
-        }
-        else {
-            document.getElementById("dynamic-text").innerText = "Something went wrong! 🤔";
+            leftButton.innerText = "ok whatever what's next";
+            rightButton.style.display = "none"; // Hide second button if not needed
         }
 
-        function redirectToFourthPage(choice) {
-            // Store the new response
+        function redirectToFinalPage(choice) {
+            console.log("Storing thirdResponse:", choice);
             localStorage.setItem("thirdResponse", choice);
-            window.location.href = "final-page.html"; // Update if needed
+            window.location.href = "final-page.html"; // Change this if needed
         }
     </script>
 
