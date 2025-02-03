@@ -13,10 +13,15 @@
         <!-- Dynamic Header -->
         <h1 id="dynamic-text"></h1>
 
+        <!-- Image -->
+        <div class="image-container">
+            <img id="response-image" src="oppa_phil.jpeg" alt="A picture of me">
+        </div>
+
         <!-- Buttons -->
         <div class="buttons" id="buttons-container">
-            <button id="left-button" onclick="redirectToFinalPage('left')"></button>
-            <button id="right-button" onclick="redirectToFinalPage('right')"></button>
+            <button id="left-button" onclick="redirectToFourthPage('left')"></button>
+            <button id="right-button" onclick="redirectToFourthPage('right')"></button>
         </div>
     </div>
 
@@ -31,19 +36,25 @@
         const leftButton = document.getElementById("left-button");
         const rightButton = document.getElementById("right-button");
 
+        console.log("Stored response:", response); // Debugging
+
         if (response === "....sure I guess" || response === "YAAAAAAAS") {
             document.getElementById("dynamic-text").innerText = "AMAZEBALLS";
             leftButton.innerText = "I LOVE YOU OPPA PHIL";
             rightButton.innerText = "ok what's next";
-        } else {
+        } 
+        else if (response === "still no" || response === "nahhh i'm good") {
             document.getElementById("dynamic-text").innerText = "😈😈😈 WELL TOO BAD YOU'RE STUCK WITH ME 😈😈😈";
-
-            // Remove left and right buttons
+            
+            // Remove existing buttons and add a single one
             buttonContainer.innerHTML = `<button onclick="redirectToFinalPage('next')">ok whatever what's next</button>`;
         }
+        else {
+            document.getElementById("dynamic-text").innerText = "Something went wrong! 🤔";
+        }
 
-        function redirectToFinalPage(choice) {
-            // Store the new response if needed
+        function redirectToFourthPage(choice) {
+            // Store the new response
             localStorage.setItem("thirdResponse", choice);
             window.location.href = "final-page.html"; // Update if needed
         }
