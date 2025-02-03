@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Next Step</title>
+    <title>Step 3</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,13 +13,8 @@
         <!-- Dynamic Header -->
         <h1 id="dynamic-text"></h1>
 
-        <!-- Image Container -->
-        <div class="image-container">
-            <img id="response-image" src="oppa_phil.jpeg" alt="A picture of me">
-        </div>
-
         <!-- Buttons -->
-        <div class="buttons">
+        <div class="buttons" id="buttons-container">
             <button id="left-button" onclick="redirectToFinalPage('left')"></button>
             <button id="right-button" onclick="redirectToFinalPage('right')"></button>
         </div>
@@ -27,27 +22,30 @@
 
     <script>
         // Get stored response from localStorage
-        const response = localStorage.getItem("valentineResponse");
+        const response = localStorage.getItem("secondResponse");
+
+        // Get button container
+        const buttonContainer = document.getElementById("buttons-container");
 
         // Get button elements
         const leftButton = document.getElementById("left-button");
         const rightButton = document.getElementById("right-button");
 
-        // Change text based on the previous response
-        if (response === "yes") {
-            document.getElementById("dynamic-text").innerText = "...oh ok, but what about this guy?";
-            leftButton.innerText = "....sure I guess";
-            rightButton.innerText = "still no";
+        if (response === "....sure I guess" || response === "YAAAAAAAS") {
+            document.getElementById("dynamic-text").innerText = "AMAZEBALLS";
+            leftButton.innerText = "I LOVE YOU OPPA PHIL";
+            rightButton.innerText = "ok what's next";
         } else {
-            document.getElementById("dynamic-text").innerText = "Good choice, how about this handsome Korean oppa?";
-            leftButton.innerText = "YAAAAAAAS";
-            rightButton.innerText = "nahhh I'm good";
+            document.getElementById("dynamic-text").innerText = "😈😈😈 WELL TOO BAD YOU'RE STUCK WITH ME 😈😈😈";
+
+            // Remove left and right buttons
+            buttonContainer.innerHTML = `<button onclick="redirectToFinalPage('next')">ok whatever what's next</button>`;
         }
 
         function redirectToFinalPage(choice) {
             // Store the new response if needed
-            localStorage.setItem("secondResponse", choice);
-            window.location.href = "page-3.html"; // Change this if there's another page
+            localStorage.setItem("thirdResponse", choice);
+            window.location.href = "final-page.html"; // Update if needed
         }
     </script>
 
