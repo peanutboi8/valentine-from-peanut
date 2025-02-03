@@ -15,13 +15,13 @@
 
         <!-- Image Container -->
         <div class="image-container">
-            <img id="response-image" src="oppa_phil.jpeg" alt="A picture of me">
+            <img id="response-image" src="your-photo.jpg" alt="A picture of me">
         </div>
 
         <!-- Buttons -->
         <div class="buttons">
-            <button onclick="redirectToFinalPage()">Good choice</button>
-            <button onclick="redirectToFinalPage()">HELLL no</button>
+            <button id="left-button" onclick="redirectToFinalPage('left')"></button>
+            <button id="right-button" onclick="redirectToFinalPage('right')"></button>
         </div>
     </div>
 
@@ -29,15 +29,25 @@
         // Get stored response from localStorage
         const response = localStorage.getItem("valentineResponse");
 
-        // Set the appropriate message
+        // Get button elements
+        const leftButton = document.getElementById("left-button");
+        const rightButton = document.getElementById("right-button");
+
+        // Change text based on the previous response
         if (response === "yes") {
             document.getElementById("dynamic-text").innerText = "...oh ok, but what about this guy?";
+            leftButton.innerText = "....sure I guess";
+            rightButton.innerText = "still no";
         } else {
             document.getElementById("dynamic-text").innerText = "Good choice, how about this handsome oppa?";
+            leftButton.innerText = "YAAAAAAAS";
+            rightButton.innerText = "nahhh I'm good";
         }
 
-        function redirectToFinalPage() {
-            window.location.href = "final-page.html"; // Change this if there's a next page
+        function redirectToFinalPage(choice) {
+            // Store the new response if needed
+            localStorage.setItem("secondResponse", choice);
+            window.location.href = "final-page.html"; // Change this if there's another page
         }
     </script>
 
