@@ -84,3 +84,24 @@ h1 {
     display: block;
     margin-top: 10px; /* Adjust spacing as needed */
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff; /* Optional: Change background color */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.flower-image {
+    width: 250px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
