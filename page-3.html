@@ -20,7 +20,7 @@
 
         <!-- Buttons -->
         <div class="buttons">
-            <button id="left-button" onclick="redirectToFinalPage('I LOVE YOU OPPA PHIL')"></button>
+            <button id="left-button" onclick="redirectToFinalPage('I LOVE YOU OPPA PHIL, WHATS NEXT??')"></button>
             <button id="right-button" onclick="redirectToFinalPage('ok whats next')"></button>
         </div>
     </div>
@@ -44,8 +44,8 @@
         // Change text based on the previous response
         if (response === "....sure I guess" || response === "YAAAAAAAS") {
             document.getElementById("dynamic-text").innerText = "AMAZEBALLS";
-            leftButton.innerText = "I LOVE YOU OPPA PHIL";
-            rightButton.innerText = "ok what's next";
+            leftButton.innerText = "I LOVE YOU OPPA PHIL, WHATS NEXT??";
+            rightButton.style.display = "none";
         } else {
             document.getElementById("dynamic-text").innerText = "😈😈😈 WELL TOO BAD YOU'RE STUCK WITH ME 😈😈😈";
             leftButton.innerText = "ok whatever what's next";
@@ -55,7 +55,7 @@
         function redirectToFinalPage(choice) {
             console.log("Storing thirdResponse:", choice);
             localStorage.setItem("thirdResponse", choice);
-            window.location.href = "final-page.html"; // Change this if needed
+            window.location.href = "page-4.html"; // Change this if needed
         }
     </script>
 
