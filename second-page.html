@@ -20,8 +20,8 @@
 
         <!-- Buttons -->
         <div class="buttons">
-            <button id="left-button" onclick="redirectToThirdage('left')"></button>
-            <button id="right-button" onclick="redirectToThirdPage('right')"></button>
+            <button id="left-button" onclick="redirectToThirdPage(this.innerText)"></button>
+            <button id="right-button" onclick="redirectToThirdPage(this.innerText)"></button>
         </div>
     </div>
 
@@ -45,7 +45,7 @@
         }
 
         function redirectToThirdPage(choice) {
-            // Store the new response if needed
+            console.log("Storing secondResponse:", choice);
             localStorage.setItem("secondResponse", choice);
             window.location.href = "page-3.html"; // Change this if there's another page
         }
