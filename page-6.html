@@ -34,9 +34,15 @@
                 </label>
             </div>
             <div class="food-item">
-                <img src="TOO_BAD_PHIL.jpeg" alt="Dessert 4">
+                <img src="donut.jpg" alt="Dessert 4">
                 <label>
-                    <input type="checkbox" value="dessert4"> Peanut
+                    <input type="checkbox" value="dessert4"> Donuts
+                </label>
+            </div>
+            <div class="food-item">
+                <img src="TOO_BAD_PHIL.jpeg" alt="Dessert 5">
+                <label>
+                    <input type="checkbox" value="dessert5"> Peanut
                 </label>
             </div>
         </div>
@@ -50,7 +56,7 @@
             const selectedDishes = Array.from(document.querySelectorAll("input[type='checkbox']:checked"))
                                         .map(checkbox => checkbox.value);
             localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
-            window.location.href = "page-7.html"; // Update if needed
+            window.location.href = "final-page.html"; // Update if needed
         });
     </script>
 
