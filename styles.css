@@ -79,3 +79,8 @@ h1 {
     max-width: 300px;
     border-radius: 10px;
 }
+
+.new-line {
+    display: block;
+    margin-top: 10px; /* Adjust spacing as needed */
+}
