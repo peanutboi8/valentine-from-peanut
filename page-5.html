@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Step 4</title>
+    <title>Step 5</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="content">
         <!-- Header -->
-        <h1>What would you like Oppa Phil to chef up?</h1>
+        <h1>Sorry he can't make that shit, maybe next year...how about these options?</h1>
 
         <!-- Food Selection -->
         <div class="food-selection">
             <div class="food-item">
-                <img src="Bún-Riêu.jpg" alt="Dish 1">
+                <img src="rice-cake.jpg" alt="Dish 1">
                 <label>
-                    <input type="checkbox" value="dish1"> Bún Riêu
+                    <input type="checkbox" value="dish1"> Tteukguk
                 </label>
             </div>
             <div class="food-item">
-                <img src="Bún-bò-Huế.jpg" alt="Dish 2">
+                <img src="chicken.jpeg" alt="Dish 2">
                 <label>
-                    <input type="checkbox" value="dish2"> Bún bò Huế
+                    <input type="checkbox" value="dish2"> Chicken
                 </label>
             </div>
             <div class="food-item">
-                <img src="Phở-Gà.jpg" alt="Dish 3">
+                <img src="steak.jpeg" alt="Dish 3">
                 <label>
-                    <input type="checkbox" value="dish3"> Phở Gà
+                    <input type="checkbox" value="dish3"> Steak
+                </label>
+            </div>
+            <div class="food-item">
+                <img src="fet-alfredo.jpg" alt="Dish 3">
+                <label>
+                    <input type="checkbox" value="dish3"> Fettucine Chicken Alfredo
                 </label>
             </div>
         </div>
@@ -44,7 +50,7 @@
             const selectedDishes = Array.from(document.querySelectorAll("input[type='checkbox']:checked"))
                                         .map(checkbox => checkbox.value);
             localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
-            window.location.href = "page-5.html"; // Update if needed
+            window.location.href = "page-6.html"; // Update if needed
         });
     </script>
 
